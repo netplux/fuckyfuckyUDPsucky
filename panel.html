@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+<title>Basic Panel Stresser</title>
+<meta charset="UTF-8">
+<body>
+<form id="hubAttack" action="attackAPI.php" method="post">
+    <center>
+        <div class="hub">
+            <br></br>
+            <input type="password" id="key" name="key" placeholder="Key for use it" required><br></br>
+            <input type="text" id="host" name="host" placeholder="Target Host" required><br></br>
+            <input type="text" id="port" name="port" placeholder="Port (Ex: 80)" required><br></br>
+            <input type="text" id="time" name="time" placeholder="Time of attack (Max: 300)" required><br></br>
+            <select id="methods" name="methods">
+                <optgroup label="Layer 4">
+                    <option>UDP</option>
+                </optgroup>
+            </select><br></br>         
+      <a hidden="hidden">     <audio id="myAudio" controls="audio">
+  <source src="test.mp3" type="audio/mpeg">
+  </a>
+
+</audio>
+
+<button onclick="playAudio()" type="button">Start Attack</button>
+
+       
+        </div>
+    </center>
+    <script>
+    var x = document.getElementById("myAudio"); 
+
+    function playAudio() { 
+      x.play(); 
+    } 
+
+    function pauseAudio() { 
+     x.pause(); 
+    }
+</script> 
+</form>
+</body>
+</html>
+
